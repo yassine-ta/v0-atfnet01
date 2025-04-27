@@ -84,3 +84,8 @@ Traceback (most recent call last):
   File "e:\ATFNet UI Application\strategies\atfnet_strategy.py", line 146, in _initialize_components
     raise RuntimeError(f"Component initialization failed: {e}")
 RuntimeError: Component initialization failed: FrequencyFilter.__init__() got an unexpected keyword argument 'lookback_period'
+2025-04-27 17:57:59,055 - app.enhanced_app - ERROR - enhanced_atfnet_app.py:716 - Error in backtest worker: ATFNetStrategy.backtest() got an unexpected keyword argument 'progress_callback'
+Traceback (most recent call last):
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 702, in run
+    results = self.strategy.backtest(
+TypeError: ATFNetStrategy.backtest() got an unexpected keyword argument 'progress_callback'
