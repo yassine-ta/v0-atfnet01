@@ -1,0 +1,46 @@
+# ATFNet Core Components Configuration
+
+# Attention Mechanism
+attention:
+  learning_rate: 0.01
+  lookback_period: 60
+  time_domain_weight: 0.5
+  freq_domain_weight: 0.5
+
+# Price Forecaster
+price_forecaster:
+  forecast_horizon: 20
+  lookback_period: 60
+  adaptation_rate: 0.05
+  rnn_learning_rate: 0.01
+
+# Frequency Filter
+frequency_filter:
+  lookback_period: 60
+  entropy_threshold: 0.6
+  cyclicality_threshold: 0.5
+
+# Market Regime Detector
+market_regime:
+  lookback_bars: 100
+  trend_threshold: 0.6
+  volatility_threshold: 1.5
+
+# Risk Manager
+risk_manager:
+  base_risk_per_trade: 1.0
+  max_risk_per_trade: 3.0
+  max_daily_loss: 5.0
+  max_drawdown: 10.0
+  emergency_drawdown: 15.0
+  dynamic_risk_enabled: true
+  adaptation_rate: 0.1
+
+# Signal Aggregator
+signal_aggregator:
+  attention_weight: 0.4
+  forecast_weight: 0.4
+  filter_weight: 0.2
+  entry_threshold: 0.6
+  exit_threshold: 0.3
+  use_trend_filter: true

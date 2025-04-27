@@ -1,0 +1,86 @@
+2025-04-27 16:43:27,734 - app.enhanced_app - ERROR - enhanced_atfnet_app.py:3334 - Error in main: 'EnhancedATFNetApp' object has no attribute 'toggle_connection'
+Traceback (most recent call last):
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 3327, in main
+    window = EnhancedATFNetApp()
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 988, in __init__
+    self.init_ui()
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 1088, in init_ui
+    self.create_toolbar()
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 1127, in create_toolbar
+    self.connect_action.triggered.connect(self.toggle_connection)
+AttributeError: 'EnhancedATFNetApp' object has no attribute 'toggle_connection'
+2025-04-27 16:46:14,146 - app.enhanced_app - ERROR - enhanced_atfnet_app.py:3358 - Error in main: 'EnhancedATFNetApp' object has no attribute 'import_data_dialog'
+Traceback (most recent call last):
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 3351, in main
+    window = EnhancedATFNetApp()
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 989, in __init__
+    self.init_ui()
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 1089, in init_ui
+    self.create_toolbar()
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 1134, in create_toolbar
+    self.import_data_action.triggered.connect(self.import_data_dialog)
+AttributeError: 'EnhancedATFNetApp' object has no attribute 'import_data_dialog'
+2025-04-27 16:49:06,871 - app.enhanced_app - ERROR - enhanced_atfnet_app.py:3376 - Error in main: 'EnhancedATFNetApp' object has no attribute 'run_backtest'
+Traceback (most recent call last):
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 3369, in main
+    window = EnhancedATFNetApp()
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 989, in __init__
+    self.init_ui()
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 1089, in init_ui
+    self.create_toolbar()
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 1144, in create_toolbar
+    self.start_backtest_action.triggered.connect(self.run_backtest)
+AttributeError: 'EnhancedATFNetApp' object has no attribute 'run_backtest'
+2025-04-27 16:55:54,329 - app.enhanced_app - ERROR - enhanced_atfnet_app.py:3524 - Error in main: 'EnhancedATFNetApp' object has no attribute 'update_optimization_visualization'
+Traceback (most recent call last):
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 3517, in main
+    window = EnhancedATFNetApp()
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 989, in __init__
+    self.init_ui()
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 1100, in init_ui
+    self.create_optimization_tab()
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 2093, in create_optimization_tab
+    self.optimization_x_axis_combo.currentTextChanged.connect(self.update_optimization_visualization)
+AttributeError: 'EnhancedATFNetApp' object has no attribute 'update_optimization_visualization'
+2025-04-27 16:58:53,224 - app.enhanced_app - ERROR - enhanced_atfnet_app.py:3241 - Error initializing ATFNet: Component initialization failed: FrequencyFilter.__init__() got an unexpected keyword argument 'lookback_period'
+Traceback (most recent call last):
+  File "e:\ATFNet UI Application\strategies\atfnet_strategy.py", line 122, in _initialize_components
+    self.freq_filter = FrequencyFilter(
+TypeError: FrequencyFilter.__init__() got an unexpected keyword argument 'lookback_period'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 3224, in init_atfnet
+    self.strategy = ATFNetStrategy(
+  File "e:\ATFNet UI Application\strategies\atfnet_strategy.py", line 67, in __init__
+    self._initialize_components()
+  File "e:\ATFNet UI Application\strategies\atfnet_strategy.py", line 146, in _initialize_components
+    raise RuntimeError(f"Component initialization failed: {e}")
+RuntimeError: Component initialization failed: FrequencyFilter.__init__() got an unexpected keyword argument 'lookback_period'
+2025-04-27 17:04:18,410 - app.enhanced_app - ERROR - enhanced_atfnet_app.py:3326 - Error connecting to MT5: 'MT5API' object has no attribute 'connect'
+Traceback (most recent call last):
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 3318, in toggle_connection
+    success = self.mt5_api.connect()
+AttributeError: 'MT5API' object has no attribute 'connect'
+2025-04-27 17:04:27,985 - app.enhanced_app - ERROR - enhanced_atfnet_app.py:3326 - Error connecting to MT5: 'MT5API' object has no attribute 'connect'
+Traceback (most recent call last):
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 3318, in toggle_connection
+    success = self.mt5_api.connect()
+AttributeError: 'MT5API' object has no attribute 'connect'
+2025-04-27 17:06:01,628 - app.enhanced_app - ERROR - enhanced_atfnet_app.py:3241 - Error initializing ATFNet: Component initialization failed: FrequencyFilter.__init__() got an unexpected keyword argument 'lookback_period'
+Traceback (most recent call last):
+  File "e:\ATFNet UI Application\strategies\atfnet_strategy.py", line 122, in _initialize_components
+    self.freq_filter = FrequencyFilter(
+TypeError: FrequencyFilter.__init__() got an unexpected keyword argument 'lookback_period'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\ATFNet UI Application\app\enhanced_atfnet_app.py", line 3224, in init_atfnet
+    self.strategy = ATFNetStrategy(
+  File "e:\ATFNet UI Application\strategies\atfnet_strategy.py", line 67, in __init__
+    self._initialize_components()
+  File "e:\ATFNet UI Application\strategies\atfnet_strategy.py", line 146, in _initialize_components
+    raise RuntimeError(f"Component initialization failed: {e}")
+RuntimeError: Component initialization failed: FrequencyFilter.__init__() got an unexpected keyword argument 'lookback_period'

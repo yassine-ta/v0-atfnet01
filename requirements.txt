@@ -1,0 +1,59 @@
+# Core dependencies
+numpy>=1.20.0
+pandas>=1.3.0
+scipy>=1.7.0
+scikit-learn>=1.0.0
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# MetaTrader5 connection
+MetaTrader5>=5.0.34
+
+# Deep learning
+tensorflow>=2.8.0
+keras>=2.8.0
+torch>=1.10.0
+transformers>=4.18.0
+
+# Signal processing
+pywavelets>=1.2.0
+statsmodels>=0.13.0
+
+# GUI and visualization
+PyQt5>=5.15.6
+pyqtgraph>=0.12.4
+QtAwesome>=1.1.1
+pyqtwebengine>=5.15.5
+plotly>=5.6.0
+dash>=2.3.0
+dash-bootstrap-components>=1.0.0
+
+# Data handling and storage
+h5py>=3.6.0
+pyarrow>=7.0.0
+tables>=3.7.0
+
+# Utilities
+tqdm>=4.64.0
+joblib>=1.1.0
+pyyaml>=6.0
+python-dateutil>=2.8.2
+pytz>=2022.1
+colorlog>=6.6.0
+configparser>=5.2.0
+
+# Optimization
+optuna>=2.10.0
+hyperopt>=0.2.7
+
+# Testing
+pytest>=7.1.1
+pytest-mock>=3.7.0
+
+# Documentation
+sphinx>=4.5.0
+sphinx-rtd-theme>=1.0.0
+
+# Jupyter (for development and analysis)
+jupyter>=1.0.0
+ipywidgets>=7.7.0

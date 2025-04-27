@@ -1,0 +1,62 @@
+# ATFNet Python Implementation Configuration
+
+# MetaTrader 5 Connection
+mt5:
+  terminal_path: ""  # Path to MT5 terminal, leave empty for auto-detection
+  login: 0  # MT5 account login
+  password: ""  # MT5 account password
+  server: ""  # MT5 server
+  timeout: 60000  # Connection timeout in milliseconds
+  timezone: "UTC"  # Timezone for date/time operations
+  deviation: 10  # Price deviation for orders in points
+  magic: 123456  # Magic number for orders
+
+# Data Management
+data:
+  data_dir: "data"  # Main data directory
+  cache_dir: "data/cache"  # Cache directory for historical data
+  feature_dir: "data/features"  # Directory for preprocessed features
+
+# Model Management
+models:
+  models_dir: "models"  # Directory for trained models
+  
+  # LSTM Model Configuration
+  lstm:
+    units: [64, 32]  # LSTM layer units
+    dropout: 0.2  # Dropout rate
+    learning_rate: 0.001  # Learning rate
+  
+  # GRU Model Configuration
+  gru:
+    units: [64, 32]  # GRU layer units
+    dropout: 0.2  # Dropout rate
+    learning_rate: 0.001  # Learning rate
+  
+  # Hybrid Model Configuration
+  hybrid:
+    lstm_units: [64]  # LSTM branch units
+    gru_units: [64]  # GRU branch units
+    dense_units: [32]  # Dense layer units
+    dropout: 0.2  # Dropout rate
+    learning_rate: 0.001  # Learning rate
+
+# Trading Strategy
+strategy:
+  sequence_length: 60  # Input sequence length
+  prediction_threshold: 0.0015  # Minimum predicted return for trade entry
+  attention_threshold: 0.6  # Minimum attention score for trade entry
+  learning_rate: 0.01  # Learning rate for attention weights
+  max_positions: 3  # Maximum number of open positions
+  risk_per_trade: 0.01  # Risk per trade as percentage of balance
+  atr_multiplier: 1.0  # ATR multiplier for stop loss
+  use_trailing_stop: true  # Whether to use trailing stop
+  trailing_stop_multiplier: 2.0  # ATR multiplier for trailing stop
+  check_interval: 60  # Interval between checks in seconds
+  initial_balance: 10000  # Initial balance for backtesting
+  target_column: "returns"  # Target column for prediction
+  target_shift: -1  # Target shift (-1 for next bar)
+  train_regime_classifier: true  # Whether to train regime classifier
+  model_type: "lstm"  # Model type (lstm, gru, hybrid)
+  epochs: 100  # Training epochs
+  batch_size: 32  # Training batch size

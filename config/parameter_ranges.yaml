@@ -1,0 +1,121 @@
+# Parameter Optimization Ranges
+# This file defines the ranges for parameter optimization during backtesting
+
+# ATFNet Core Parameters
+atfnet:
+  sequence_length:
+    min: 20
+    max: 100
+    step: 10
+  prediction_length:
+    min: 5
+    max: 30
+    step: 5
+  prediction_threshold:
+    min: 0.0005
+    max: 0.0030
+    step: 0.0005
+  time_domain_weight:
+    min: 0.3
+    max: 0.7
+    step: 0.1
+  freq_domain_weight:
+    min: 0.3
+    max: 0.7
+    step: 0.1
+
+# Position Management
+position_management:
+  max_positions:
+    min: 1
+    max: 5
+    step: 1
+  max_sl_pips:
+    min: 20
+    max: 100
+    step: 10
+
+# Dynamic Risk Management
+risk_management:
+  base_risk_per_trade:
+    min: 0.5
+    max: 3.0
+    step: 0.5
+  max_risk_per_trade:
+    min: 1.0
+    max: 5.0
+    step: 0.5
+  risk_increase_step:
+    min: 0.1
+    max: 1.0
+    step: 0.1
+
+# Attention Mechanism Parameters
+attention:
+  attention_threshold:
+    min: 0.4
+    max: 0.8
+    step: 0.05
+  learning_rate:
+    min: 0.001
+    max: 0.05
+    step: 0.005
+
+# Technical Indicators
+indicators:
+  atr_period:
+    min: 7
+    max: 21
+    step: 7
+  atr_multiplier:
+    min: 1.0
+    max: 3.0
+    step: 0.5
+  trend_ema_period:
+    min: 20
+    max: 100
+    step: 10
+
+# Pattern Recognition
+patterns:
+  body_ratio:
+    min: 0.4
+    max: 0.8
+    step: 0.1
+  wick_ratio:
+    min: 0.1
+    max: 0.5
+    step: 0.1
+
+# Z-Score Settings
+z_score:
+  z_score_period:
+    min: 10
+    max: 50
+    step: 10
+  z_score_threshold:
+    min: 1.0
+    max: 3.0
+    step: 0.5
+
+# Trailing Stop Settings
+trailing_stop:
+  rr_ratio:
+    min: 1.0
+    max: 3.0
+    step: 0.5
+  trailing_stop_atr_mult:
+    min: 1.0
+    max: 3.0
+    step: 0.5
+
+# Market Regime Detection
+regime_detection:
+  trend_strength_threshold:
+    min: 0.4
+    max: 0.8
+    step: 0.1
+  volatility_threshold:
+    min: 0.5
+    max: 2.5
+    step: 0.5

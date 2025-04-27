@@ -1,0 +1,114 @@
+# ATFNet Parameters Configuration
+# This file mirrors the parameters from OPT_ATFNet_Parameters.mqh
+
+# General Settings
+general:
+  expert_magic: 123456
+  enable_logging: true
+  enable_alerts: true
+
+# ATFNet Core Parameters
+atfnet:
+  sequence_length: 60
+  prediction_length: 20
+  prediction_threshold: 0.0015
+  use_frequency_domain: true
+  time_domain_weight: 0.5
+  freq_domain_weight: 0.5
+
+# Position Management
+position_management:
+  max_positions: 3
+  min_lots: 0.01
+  max_lots: 10.0
+  max_daily_loss: 5.0
+  max_position_dd: 2.0
+  max_allowed_dd: 10.0
+  max_sl_pips: 50.0
+  min_profit_percent: 1.0
+
+# Dynamic Risk Management
+risk_management:
+  base_risk_per_trade: 1.0
+  max_risk_per_trade: 3.0
+  profit_threshold: 5.0
+  risk_increase_step: 0.5
+  enable_dynamic_risk: true
+
+# Drawdown Protection
+drawdown_protection:
+  max_floating_dd: 10.0
+  emergency_close_dd: 15.0
+  scale_position_size: true
+  dd_scale_factor: 0.5
+
+# Attention Mechanism Parameters
+attention:
+  attention_threshold: 0.6
+  learning_rate: 0.01
+  weight_update_hours: 24
+
+# Strategy Parameters
+strategy:
+  range_lookback: 20
+  entry_check_seconds: 60
+  period_time: "H1"  # Equivalent to ENUM_TIMEFRAMES
+  target_profit: 2.0
+
+# Technical Indicators
+indicators:
+  atr_period: 14
+  atr_multiplier: 1.5
+  use_trend_filter: true
+  trend_ema_period: 50
+  price_source: "close"  # Equivalent to ENUM_APPLIED_PRICE
+
+# Pattern Recognition
+patterns:
+  candle_rates: 20
+  body_ratio: 0.6
+  wick_ratio: 0.3
+  doji_ratio: 0.1
+  pinbar_ratio: 0.3
+  inside_bar_max: 0.8
+  outside_bar_min: 1.2
+
+# Z-Score Settings
+z_score:
+  use_weighted_z_score: true
+  z_score_period: 20
+  z_score_threshold: 2.0
+
+# Session Trading
+sessions:
+  enable_session_trading: false
+  trade_asian_session: true
+  trade_european_session: true
+  trade_american_session: true
+  asian_start: 0
+  asian_end: 8
+  european_start: 7
+  european_end: 16
+  american_start: 13
+  american_end: 22
+
+# Market Hours
+market_hours:
+  close_all_friday: true
+  friday_close_hour: 20
+  prevent_weekend_trades: true
+
+# Trailing Stop Settings
+trailing_stop:
+  rr_ratio: 2.0
+  swing_rr_ratio: 1.5
+  first_target_close_pct: 0.5
+  trailing_stop_atr_mult: 2.0
+  min_trailing_stop_pips: 10.0
+
+# Market Regime Detection
+regime_detection:
+  enable_regime_detection: true
+  regime_lookback_bars: 100
+  trend_strength_threshold: 0.6
+  volatility_threshold: 1.5
